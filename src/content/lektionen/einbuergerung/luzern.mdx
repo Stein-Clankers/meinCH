@@ -1,0 +1,107 @@
+---
+titel: Einbürgerung im Kanton Luzern
+beschreibung: Wohnsitz, Sprache und Grundkenntnisse im Kanton Luzern, wer in der Gemeinde entscheidet, Gebühren und Ablauf des Verfahrens.
+thema: einbuergerung
+kanton: LU
+reihenfolge: 30
+geprueft_am: 2026-10-24
+quellen:
+  - titel: Bundesgesetz über das Schweizer Bürgerrecht (BüG, SR 141.0)
+    url: https://www.fedlex.admin.ch/eli/cc/2016/404/de
+    artikel: Art. 18
+  - titel: Verordnung über das Schweizer Bürgerrecht (BüV, SR 141.01)
+    url: https://www.fedlex.admin.ch/eli/cc/2016/405/de
+    artikel: Art. 2, 25
+  - titel: Kantonales Bürgerrechtsgesetz (KBüG, SRL Nr. 2)
+    url: https://srl.lu.ch/app/de/texts_of_law/2
+    artikel: § 15–25, 30, 35
+  - titel: Kantonale Bürgerrechtsverordnung (KBüV, SRL Nr. 3)
+    url: https://srl.lu.ch/app/de/texts_of_law/3
+    artikel: § 2, 3, 4
+  - titel: Kanton Luzern, Abteilung Gemeinden, Ordentliche Einbürgerung
+    url: https://gemeinden.lu.ch/Einbuergerungen/einbuergerung_ausland/ordentliche_einbuergerung
+  - titel: Kanton Luzern, Gebühren Bund und Kanton für ordentliche Einbürgerungen (ab 1. Januar 2017)
+    url: https://gemeinden.lu.ch/-/media/Gemeinden/Dokumente/Einbuergerungen/Gebhren_Einbrgerungen_ab_1117.pdf
+  - titel: Kanton Luzern, Kenntnisse der Schweiz – 100 Fragen und Antworten (April 2021)
+    url: https://gemeinden.lu.ch/-/media/Gemeinden/Dokumente/Einbuergerungen/neu_Kenntnisse_der_Schweiz_Fragen_und_Antworten.pdf
+  - titel: Einbürgerungsreglement der Stadt Luzern (sRSL 0.5.6.1.1, Ausgabe vom 1. April 2026)
+    url: https://www.stadtluzern.ch/_doc/6915205
+    artikel: Art. 3, 8, 8a
+  - titel: Stadt Luzern, Tätigkeitsbericht 2025 der Einbürgerungskommission
+    url: https://www.stadtluzern.ch/_docn/6880219/T%C3%A4tigkeitsbericht_2025_Einb%C3%BCrgerungskommission_Stadt_Luzern.pdf
+    artikel: S. 3–4
+  - titel: LUSTAT Statistik Luzern, Einbürgerungen
+    url: https://www.lustat.ch/monitoring/kennzahlen-kanton-luzern/bevoelkerung/einbuergerungen
+  - titel: LUSTAT News vom 27. August 2025 (Einbürgerungen 2024)
+    url: https://newsletter.lu.ch/files/SK/Mitteilungen%202025/08_Aug/20250827_lustatnews.pdf
+---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import Ablauf from '../../../components/viz/Ablauf.astro';
+import { pfad } from '../../../lib/site';
+
+<Zahlen zahlen={[
+  { wert: '3 J.', label: 'Wohnsitz in der Gemeinde', hinweis: 'in den letzten 5 Jahren' },
+  { wert: '3 J.', label: 'ohne Sozialhilfe', hinweis: 'oder ganz zurückbezahlt' },
+  { wert: 'B1', label: 'Deutsch mündlich', hinweis: 'schriftlich A2' },
+  { wert: '1311', label: 'Einbürgerungen 2025', hinweis: 'Kanton Luzern' },
+]} />
+
+Wer sich einbürgern lässt, wird gleichzeitig Bürgerin oder Bürger einer **Gemeinde**, eines **Kantons** und der **Schweiz**. Für die Voraussetzungen des Bundes (Niederlassungsbewilligung C, 10 Jahre Aufenthalt, Integration) siehe <a href={pfad('einbuergerung/zuerich')}>Einbürgerung im Kanton Zürich</a>. Sie gelten in allen Kantonen gleich. Hier steht, was im Kanton Luzern dazukommt.
+
+## Wohnsitz
+
+Die Kantone legen eine Mindestwohndauer von 2 bis 5 Jahren fest (Art. 18 BüG). Luzern verlangt zwei Dinge (§ 17 und 18 KBüG):
+
+- in den **letzten 5 Jahren** vor dem Gesuch insgesamt **3 Jahre** in der Einbürgerungsgemeinde gewohnt und
+- unmittelbar vor der Einbürgerung mindestens **1 Jahr ununterbrochen** dort gewohnt.
+
+Ziehst du während des Verfahrens um, bleibt die bisherige Gemeinde nur zuständig, wenn sie ihre Prüfung schon abgeschlossen hat (§ 15 KBüG).
+
+## Was Luzern zusätzlich verlangt
+
+- **Sozialhilfe und Lebensunterhalt:** Wer in den **3 Jahren vor dem Gesuch** oder während des Verfahrens Sozialhilfe bezieht, wird nicht eingebürgert, ausser die Sozialhilfe ist ganz zurückbezahlt. Das entspricht der Regel des Bundes. Ausserdem musst du deinen Lebensunterhalt beim Gesuch und bei der Einbürgerung selbst decken, oder du bist in Aus- oder Weiterbildung (§ 23 KBüG).
+- **Strafregister:** Solange ein Eintrag im Strafregister besteht, den die Behörden sehen, ist eine Einbürgerung ausgeschlossen. Ausnahmen sind bei bedingten Strafen und Übertretungen möglich (§ 20 KBüG).
+- **Ruf:** Du musst in der Gemeinde einen guten Ruf geniessen (§ 17 KBüG).
+- **Familie:** Du sollst die Integration deiner Ehepartnerin oder deines Ehepartners und deiner Kinder unterstützen, etwa beim Deutschlernen (§ 24 KBüG).
+
+## Sprache
+
+Verlangt sind **Deutsch B1 mündlich und A2 schriftlich** (§ 22 KBüG). Den Nachweis bringst du mit einem anerkannten Sprachtest, etwa dem fide-Test. Keinen Test brauchst du, wenn Deutsch deine Muttersprache ist, wenn du mindestens 5 Jahre die obligatorische Schule auf Deutsch besucht hast oder wenn du eine Ausbildung auf Sekundarstufe II oder höher auf Deutsch abgeschlossen hast.
+
+## Wie Grundkenntnisse geprüft werden
+
+Du musst Grundkenntnisse über Geografie, Geschichte, Politik und Gesellschaft von **Bund, Kanton und Gemeinde** haben und am Leben vor Ort teilnehmen (§ 25 KBüG). Einen **kantonalen schriftlichen Test** gibt es in Luzern **nicht**. Wie geprüft wird, bestimmt die Gemeinde, meist in einem **Einbürgerungsgespräch**. Die Gemeinde lässt ausserdem nach Weisungen des Kantons einen **Einbürgerungsbericht** erstellen (§ 3 KBüV).
+
+Ein Beispiel ist die **Stadt Luzern**: Dort führt die **Einbürgerungskommission** mit 7 Mitgliedern das Gespräch und entscheidet abschliessend (Art. 3 und 8 Einbürgerungsreglement). Fehlen Kenntnisse, stellt sie das Gesuch zurück, statt es abzulehnen. 2025 geschah das bei 4 Gesuchen, alle wegen fehlender Staatskunde-Kenntnisse. Zur Vorbereitung bietet die Stadt mit der Caritas Zentralschweiz einen Kurs an (4 Treffen, insgesamt 10 Lektionen).
+
+Als Lernmaterial veröffentlicht der Kanton die Liste **«Kenntnisse der Schweiz – 100 Fragen und Antworten»**: je 25 Fragen zu Politik, Geografie, Geschichte und Gesellschaft. Offiziell ist sie für das Gespräch bei der erleichterten Einbürgerung gedacht, sie deckt aber dieselben Themen ab.
+
+## Wer in der Gemeinde entscheidet
+
+Das Gesetz gibt den Entscheid über die Zusicherung des Gemeindebürgerrechts der **Gemeindeversammlung** (§ 30 KBüG). Die Stimmberechtigten können ihn aber dem Gemeinderat, dem Gemeindeparlament oder einer **Einbürgerungskommission** übertragen, die Stadt Luzern zum Beispiel ihrer Kommission. Welches Organ in deiner Gemeinde entscheidet, steht in deren Gemeindeordnung oder Einbürgerungsreglement. Gegen den Entscheid kannst du dich beim Justiz- und Sicherheitsdepartement beschweren (§ 35 KBüG). Die Gemeinde veröffentlicht die Namen der Personen, denen sie das Bürgerrecht zugesichert hat (§ 16 KBüG).
+
+## Ablauf
+
+<Ablauf titel="Ordentliche Einbürgerung im Kanton Luzern" schritte={[
+  { titel: 'Gesuch', text: 'Bei der Wohngemeinde einreichen, mit Sprachnachweis und Registerauszügen.' },
+  { zahl: '14 Mt.', titel: 'Gemeinde', text: 'Einbürgerungsbericht, Gespräch, Zusicherung des Gemeindebürgerrechts. Dauer in der Stadt Luzern 2025.' },
+  { titel: 'Kanton prüft', text: 'Die Abteilung Gemeinden prüft das Gesuch und beantragt die Bewilligung des Bundes.' },
+  { titel: 'Bund', text: 'Das SEM erteilt die eidgenössische Einbürgerungsbewilligung.' },
+  { titel: 'Kanton', text: 'Die Abteilung Gemeinden erteilt das Kantonsbürgerrecht. Erst jetzt bist du eingebürgert.' },
+]} />
+
+Für die Schritte bei Kanton und Bund rechnet der Kanton mit **4 bis 6 Monaten**. Wie lange die Gemeinde braucht, ist unterschiedlich: In der Stadt Luzern dauerte es 2025 im Durchschnitt 14 Monate.
+
+## Gebühren
+
+| Wer | Einzelperson | Ehepaar | Minderjährige allein |
+|---|---|---|---|
+| Kanton Luzern | CHF 350 | CHF 450 | CHF 200 |
+| Gemeinde, Beispiel Stadt Luzern | CHF 500 | CHF 500 | keine |
+| Bund | CHF 100 | CHF 150 | CHF 50 |
+
+Die Stadt Luzern verlangt seit dem 1. April 2026 eine **Pauschale von CHF 500 pro Gesuch**, auch wenn Kinder eingeschlossen sind. Wer beim Gesuch jünger als 25 ist, zahlt der Stadt nichts (Art. 8a Einbürgerungsreglement). Andere Gemeinden haben eigene Tarife. Dazu kommen die Kosten für Sprachnachweis und Registerauszüge.
+
+## Zahlen
+
+2025 wurden im Kanton Luzern **1311** Ausländerinnen und Ausländer eingebürgert, 2024 waren es 1461. Drei Viertel davon wurden ordentlich eingebürgert. Am häufigsten waren Personen aus Ländern der EU, vor allem aus Deutschland (436), danach aus dem Kosovo (145).

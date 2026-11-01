@@ -1,0 +1,93 @@
+---
+titel: Politik im Kanton Luzern
+beschreibung: Kantonsrat, Regierungsrat, Gerichte und die sechs Wahlkreise des Kantons Luzern, die Volksrechte und wie die Stadt Luzern organisiert ist.
+thema: politik
+kanton: LU
+reihenfolge: 52
+geprueft_am: 2026-10-24
+quellen:
+  - titel: Verfassung des Kantons Luzern vom 17. Juni 2007 (KV, SRL Nr. 1)
+    url: https://srl.lu.ch/app/de/texts_of_law/1
+    artikel: § 6, 7, 9, 18–25, 31, 36, 51, 63, 70
+  - titel: Stimmrechtsgesetz (StRG, SRL Nr. 10)
+    url: https://srl.lu.ch/app/de/texts_of_law/10
+    artikel: § 95, 98a
+  - titel: Kantonsratsbeschluss über die Verteilung der Sitze auf die sechs Kantonsratswahlkreise vom 20. Oktober 2026 (SRL Nr. 11)
+    url: https://srl.lu.ch/app/de/texts_of_law/11
+    artikel: § 1
+  - titel: Justizgesetz (JusG, SRL Nr. 260)
+    url: https://srl.lu.ch/app/de/texts_of_law/260
+    artikel: § 7, 23, 24
+  - titel: Gemeindegesetz (GG, SRL Nr. 150)
+    url: https://srl.lu.ch/app/de/texts_of_law/150
+    artikel: § 8, 12
+  - titel: Gemeindeordnung der Stadt Luzern vom 7. Februar 1999 (Ausgabe vom 1. September 2024)
+    url: https://www.stadtluzern.ch/_doc/6234058
+    artikel: Art. 18, 31
+  - titel: Verordnung über die Sitzverteilung bei der Gesamterneuerung des Nationalrates vom 27. August 2025 (SR 161.12), Medienmitteilung des Bundesrates
+    url: https://www.admin.ch/de/newnsb/vSue6NEwJdNUFXHNhHUUs
+    artikel: Art. 1
+  - titel: BFS, Amtliches Gemeindeverzeichnis der Schweiz
+    url: https://www.agvchapp.bfs.admin.ch/de/state/query
+---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import Bezirke from '../../../components/viz/Bezirke.astro';
+import { gemeindenVon } from '../../../lib/kantone';
+
+<Zahlen zahlen={[
+  { wert: '120', label: 'Kantonsrat', hinweis: 'Parlament' },
+  { wert: '5', label: 'Regierungsrat', hinweis: 'Regierung' },
+  { wert: '6', label: 'Wahlkreise' },
+  { wert: String(gemeindenVon('LU').length), label: 'Gemeinden', hinweis: 'Stand 1. Januar 2026' },
+]} />
+
+Die Amtssprache des Kantons Luzern ist **Deutsch** (§ 7 KV), Hauptort ist die **Stadt Luzern** (§ 9 KV). Die heutige **Kantonsverfassung** stammt vom 17. Juni 2007 und gilt seit dem 1. Januar 2008.
+
+## Die Behörden des Kantons
+
+| Gewalt | Behörde | Wahl |
+|---|---|---|
+| Gesetzgebung | **Kantonsrat**, 120 Mitglieder | vom Volk, alle 4 Jahre, nach Proporz, in 6 Wahlkreisen |
+| Regierung | **Regierungsrat**, 5 Mitglieder | vom Volk, alle 4 Jahre, nach Majorz, der ganze Kanton ist ein Wahlkreis |
+| Rechtsprechung | **Kantonsgericht** als oberstes Gericht, 4 Bezirksgerichte und weitere Gerichte | Kantonsgericht vom Kantonsrat |
+
+Kantonsrat und Regierungsrat werden **am gleichen Tag** gewählt (§ 31 KV). Die Regierung hat in Luzern nur **5 Mitglieder**, in Zürich und Bern sind es 7. Das Kantonsgericht urteilt über Zivil-, Straf- und Verwaltungssachen, ein separates Verwaltungsgericht gibt es nicht (§ 63 KV). Die erste Instanz sind die **Bezirksgerichte** Luzern, Kriens, Hochdorf und Willisau (§ 24 JusG), dazu das Arbeits-, das Kriminal-, das Jugend- und das Zwangsmassnahmengericht.
+
+## Die sechs Wahlkreise
+
+Die Verfassung verlangt mindestens 5 Wahlkreise (§ 19 KV), das Gesetz bildet **6** (§ 95 StRG). Sie entsprechen den Bezirken der Bundesstatistik. Vor jeder Wahl verteilt der Kantonsrat die 120 Sitze nach der Wohnbevölkerung neu.
+
+<Bezirke kanton="LU" hervorheben={['Luzern-Stadt']} legende="Luzern-Stadt: ein Wahlkreis aus einer einzigen Gemeinde" titel="Die 6 Wahlkreise des Kantons Luzern, Stand 1. Januar 2026" />
+
+| Wahlkreis | Sitze im Kantonsrat ab 2027 |
+|---|---|
+| Luzern-Land | 31 |
+| Luzern-Stadt | 23 |
+| Sursee | 22 |
+| Hochdorf | 21 |
+| Willisau | 16 |
+| Entlebuch | 7 |
+
+Die Verteilung hat der Kantonsrat am 20. Oktober 2026 für die Wahlen 2027 beschlossen. **Willisau und Entlebuch** bilden zusammen einen **Wahlkreisverbund** (§ 98a StRG): Die Sitze werden zuerst über beide Wahlkreise zusammen auf die Parteien verteilt. So haben auch kleinere Parteien im Entlebuch mit nur 7 Sitzen eine Chance.
+
+## Volksrechte
+
+- **Gesetzesinitiative:** 4000 Unterschriften, **Verfassungsinitiative:** 5000 Unterschriften, je innert **1 Jahr** (§ 20–22 KV).
+- **Fakultatives Referendum:** 3000 Unterschriften in **60 Tagen**, zum Beispiel gegen Gesetze oder Ausgaben von 3 bis 25 Millionen Franken (§ 24 und 25 KV).
+- **Gemeindereferendum:** Statt 3000 Stimmberechtigten kann auch **ein Viertel der Gemeinden** eine Volksabstimmung verlangen (§ 25 KV).
+- **Obligatorisches Referendum:** Verfassungsänderungen, Ausgaben über **25 Millionen Franken** und Initiativen, die der Kantonsrat ablehnt, kommen automatisch zur Abstimmung (§ 23 KV).
+
+## Im Bund
+
+Der Kanton Luzern wählt **9 Mitglieder** in den Nationalrat und **2** in den Ständerat. Weil die Bevölkerung gewachsen ist, erhält Luzern bei den Nationalratswahlen vom 24. Oktober 2027 **einen Sitz mehr, also 10** (Verordnung über die Sitzverteilung, SR 161.12).
+
+## Gemeinden und die Stadt Luzern
+
+In jeder Gemeinde wählen die Stimmberechtigten den **Gemeinderat** (Regierung). Sachgeschäfte entscheiden sie an der **Gemeindeversammlung** oder an der Urne. Eine Gemeinde kann diese Befugnisse in ihrer Gemeindeordnung einem **Gemeindeparlament** übertragen, das alle 4 Jahre nach Proporz gewählt wird (§ 70 KV, § 8 und 12 GG).
+
+| Behörde der Stadt Luzern | Mitglieder |
+|---|---|
+| **Grosser Stadtrat** (Parlament) | 48 |
+| **Stadtrat** (Regierung), mit dem Stadtpräsidium | 5 |
+
+Die Namen sind in Luzern anders verteilt als in Bern: In Luzern heisst die Regierung «Stadtrat» und das Parlament «Grosser Stadtrat», in Bern ist der «Stadtrat» das Parlament.
