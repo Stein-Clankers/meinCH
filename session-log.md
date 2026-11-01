@@ -56,3 +56,15 @@
 - **Verified:** build (38 pages); both lessons in the browser at desktop and 375 px, no horizontal scroll.
 - **Notes:** Moutier moved to JU on 1.1.2026 (already in the BFS data). bern.ch answers 403 to curl, the agent read it in a browser. Test price in Bern is not published. Unconfirmed: a news report that the Stadt Bern will drop its naturalisation fees.
 - **Open:** issues #2–#25; Bern lesson on the Grosser Rat Wahlkreise as a visual would need Wahlkreis data (they differ from the Verwaltungskreise).
+
+## 2026-11-01 (canton modules LU, UR, SZ, OW: #2–#5)
+
+- **Done:** four canton modules built in parallel sessions and merged as PRs: Obwalden #26, Luzern #27, Schwyz #28, Uri #29 (issues #2–#5 closed). Each adds «Politik im Kanton …» and «Einbürgerung im Kanton …». Uri adds `viz/SitzeWahlkreise.astro` (Landrat seats per municipality). Details and sources are in each PR description.
+- **Changed:** `bezirkKarte()` now puts district labels at the point farthest inside the district's largest part instead of the centroid, so a ring-shaped district (Luzern-Land around Luzern-Stadt) no longer gets its label on top of the inner one. CLAUDE.md lists the new visuals.
+- **Review:** #26 checked against the OW constitution, one wording fixed (Bürgergemeindeversammlung = resident citizens, Art. 97 KV). For #27–#29 the independent fact-check agents failed (expired login), so they were merged on the sessions' own checks (build, 375 px, all source URLs 200) without a second fact check.
+- **Verified:** build (46 pages); LU district map in the browser.
+- **Open:**
+  - Second fact check of LU, SZ, UR (and BE, which only had the research agents).
+  - `politik.yaml`: National Council seats change with the 2027 elections (LU 10, FR 8, BE and GR −1; SR 161.12). Update after 24.10.2027 or show both.
+  - Unconfirmed in the modules: LU cantonal fee basis (only a 2016 fee sheet), SZ test question count, UR cantonal fee (only altdorf.ch), OW municipal fees other than Sarnen.
+  - Canton modules #6–#25.

@@ -72,6 +72,42 @@ export function kantonKarte(nr: number, breite = 640): Karte {
 export type Bezirk = { name: string; d: string; x: number; y: number };
 export type BezirkKarte = { breite: number; hoehe: number; bezirke: Bezirk[]; seen: string; umriss: string };
 
+type Punkt = [number, number];
+
+/**
+ * Label point: the point of the district's largest part that lies farthest from its edges
+ * (grid search). Unlike the centroid it stays inside ring-shaped districts that surround another one.
+ */
+function beschriftungspunkt(polygone: Punkt[][][]): Punkt {
+  const flaeche = (r: Punkt[]) => Math.abs(r.reduce((s, [x, y], i) => { const [x2, y2] = r[(i + 1) % r.length]; return s + x * y2 - x2 * y; }, 0)) / 2;
+  const ringe = polygone.reduce((a, b) => (flaeche(b[0]) > flaeche(a[0]) ? b : a));
+  const xs = ringe[0].map((q) => q[0]), ys = ringe[0].map((q) => q[1]);
+  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
+  const innen = (x: number, y: number) => ringe.reduce((drin, r) => {
+    for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
+      if ((r[i][1] > y) !== (r[j][1] > y) && x < ((r[j][0] - r[i][0]) * (y - r[i][1])) / (r[j][1] - r[i][1]) + r[i][0]) drin = !drin;
+    }
+    return drin;
+  }, false);
+  const abstand = (x: number, y: number) => {
+    let min = Infinity;
+    for (const r of ringe) for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
+      const [ax, ay] = r[j], dx = r[i][0] - ax, dy = r[i][1] - ay;
+      const t = Math.max(0, Math.min(1, ((x - ax) * dx + (y - ay) * dy) / (dx * dx + dy * dy || 1)));
+      min = Math.min(min, Math.hypot(x - ax - t * dx, y - ay - t * dy));
+    }
+    return min;
+  };
+  let best: Punkt = [(x0 + x1) / 2, (y0 + y1) / 2], bestD = -1;
+  const schritt = Math.max(x1 - x0, y1 - y0) / 40;
+  for (let x = x0; x <= x1; x += schritt) for (let y = y0; y <= y1; y += schritt) {
+    if (!innen(x, y)) continue;
+    const d = abstand(x, y);
+    if (d > bestD) { bestD = d; best = [x, y]; }
+  }
+  return best;
+}
+
 /** One canton divided into its BFS districts (merged municipalities), with a label point per district. */
 export function bezirkKarte(code: string, breite = 640): BezirkKarte {
   const nr = KANTONE.findIndex((k) => k.code === code) + 1;
@@ -86,7 +122,7 @@ export function bezirkKarte(code: string, breite = 640): BezirkKarte {
     hoehe,
     bezirke: namen.map((name) => {
       const flaeche = merge(t, t.objects.municipalities.geometries.filter((g) => bezirkVon.get(Number(g.id)) === name) as never);
-      const [x, y] = pfad.centroid(flaeche);
+      const [x, y] = beschriftungspunkt((flaeche.coordinates as Punkt[][][]).map((poly) => poly.map((ring) => ring.map((c) => p(c) as Punkt))));
       return { name, d: runden(pfad(flaeche)), x: Math.round(x), y: Math.round(y) };
     }),
     seen: runden(pfad(seenAlle)),
