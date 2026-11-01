@@ -1,0 +1,111 @@
+---
+titel: Politik im Kanton Uri
+beschreibung: Landrat, Regierungsrat und Gerichte des Kantons Uri, die Volksrechte, die Gemeinden als Wahlkreise und die Korporationen.
+thema: politik
+kanton: UR
+reihenfolge: 53
+geprueft_am: 2026-10-24
+quellen:
+  - titel: Verfassung des Kantons Uri vom 28. Oktober 1984 (KV, RB 1.1101)
+    url: https://rechtsbuch.ur.ch/app/de/texts_of_law/1.1101
+    artikel: Art. 21, 24, 25, 27–30, 63, 64, 72, 73, 83, 84, 87, 88, 94, 95, 105a, 123
+  - titel: Gesetz über die Verhältniswahl des Landrates (Proporzgesetz, RB 2.1205)
+    url: https://rechtsbuch.ur.ch/app/de/texts_of_law/2.1205
+    artikel: Art. 1, 12, 22–24
+  - titel: Gesetz über die geheimen Wahlen, Abstimmungen und die Volksrechte (WAVG, RB 2.1201)
+    url: https://rechtsbuch.ur.ch/app/de/texts_of_law/2.1201
+    artikel: Art. 46, 48, 50, 66, 78
+  - titel: Gesetz über die Organisation der richterlichen Behörden (GOG, RB 2.3221)
+    url: https://rechtsbuch.ur.ch/app/de/texts_of_law/2.3221
+    artikel: Art. 20, 31, 33, 61b
+  - titel: Gemeindegesetz (GEG, RB 1.1111)
+    url: https://rechtsbuch.ur.ch/app/de/texts_of_law/1.1111
+    artikel: Art. 10–15
+  - titel: Verordnung über die Verwaltungsrechtspflege (VRPV, RB 2.2345)
+    url: https://rechtsbuch.ur.ch/app/de/texts_of_law/2.2345
+    artikel: Art. 23a
+  - titel: "Regierungsratsbeschluss Nr. 2023-505: Weisungen für die Landratswahlen 2024"
+    url: https://www.ur.ch/_doc/352744
+    artikel: Ziff. 13
+  - titel: Kanton Uri, Regierungsrat
+    url: https://www.ur.ch/regierungsrat
+  - titel: Verordnung über die Verteilung der Sitze im Nationalrat (SR 161.13)
+    url: https://www.fedlex.admin.ch/eli/cc/2021/533/de
+    artikel: Art. 1
+  - titel: Bundesgesetz über die politischen Rechte (BPR, SR 161.1)
+    url: https://www.fedlex.admin.ch/eli/cc/1978/688_688_688/de
+    artikel: Art. 47
+  - titel: BFS, Amtliches Gemeindeverzeichnis der Schweiz
+    url: https://www.agvchapp.bfs.admin.ch/de/state/query
+---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import SitzeWahlkreise from '../../../components/viz/SitzeWahlkreise.astro';
+import { gemeindenVon } from '../../../lib/kantone';
+
+<Zahlen zahlen={[
+  { wert: '64', label: 'Landrat', hinweis: 'Parlament' },
+  { wert: '7', label: 'Regierungsrat', hinweis: 'Regierung' },
+  { wert: String(gemeindenVon('UR').length), label: 'Gemeinden', hinweis: 'zugleich die Wahlkreise' },
+  { wert: '600', label: 'Unterschriften', hinweis: 'für eine Volksinitiative' },
+]} />
+
+Die **Kantonsverfassung** des Kantons Uri wurde am 28. Oktober 1984 angenommen und gilt seit dem 1. Januar 1985 (Art. 123 KV). **Hauptort** ist **Altdorf**. Dort haben Landrat, Regierungsrat und die obersten Gerichte ihren Sitz (Art. 63 KV). Amtssprache ist **Deutsch** (Art. 23a VRPV).
+
+## Die Behörden des Kantons
+
+| Gewalt | Behörde | Wahl |
+|---|---|---|
+| Gesetzgebung | **Landrat**, 64 Mitglieder | vom Volk, alle 4 Jahre, in den Gemeinden als Wahlkreisen |
+| Regierung | **Regierungsrat**, 7 Mitglieder | vom Volk, alle 4 Jahre, nach Majorz |
+| Rechtsprechung | **Obergericht** (13 Mitglieder) und **Landgericht Uri** (10 Mitglieder) | vom Volk |
+
+Das Parlament heisst in Uri «**Landrat**», seine Mitglieder heissen Landrätinnen und Landräte. Wer im Regierungsrat den Vorsitz hat, heisst **Landammann**, die Stellvertretung **Landesstatthalter**. Beide wählt das Volk direkt aus dem Kreis des Regierungsrates, für 2 Jahre (Art. 21, 83, 94 KV). Aus derselben Gemeinde dürfen höchstens 3 Mitglieder im Regierungsrat sitzen (Art. 95 KV). Neue Mitglieder aller drei Behörden treten ihr Amt am **1. Juni** an (Art. 84 KV).
+
+Ein eigenes Verwaltungsgericht gibt es nicht: Verwaltungsstreitigkeiten beurteilt eine Abteilung des **Obergerichts** (Art. 105a KV, Art. 33 GOG). Das frühere Landgericht Ursern wurde am 31. Mai 2023 aufgehoben, seither gibt es nur noch das Landgericht Uri (Art. 20 und 61b GOG).
+
+## Die Gemeinden sind die Wahlkreise
+
+Uri ist nicht in Bezirke eingeteilt. Für den Landrat ist jede **Einwohnergemeinde** ein eigener Wahlkreis. Die 64 Sitze werden nach der Zahl der Schweizerinnen und Schweizer verteilt, die in einer Gemeinde wohnen. Jede Gemeinde hat mindestens einen Sitz (Art. 88 KV).
+
+Gewählt wird je nach Grösse der Gemeinde unterschiedlich (Art. 88 Abs. 1 KV):
+
+- Gemeinden mit **5 oder mehr Sitzen** wählen nach **Proporz** (Verhältniswahl), an der Urne. Die Sitze werden «doppeltproportional» auf die Parteien verteilt, Listenverbindungen gibt es nicht (Art. 12 und 22–24 Proporzgesetz).
+- Gemeinden mit **1 bis 4 Sitzen** wählen nach **Majorz** (Mehrheitswahl). Gewählt sind die Personen mit den meisten Stimmen, egal von welcher Partei.
+
+<SitzeWahlkreise
+  wahlkreise={[
+    { name: 'Altdorf', sitze: 15 }, { name: 'Schattdorf', sitze: 9 }, { name: 'Bürglen', sitze: 7 },
+    { name: 'Erstfeld', sitze: 6 }, { name: 'Seedorf', sitze: 4 }, { name: 'Silenen', sitze: 4 },
+    { name: 'Attinghausen', sitze: 3 }, { name: 'Flüelen', sitze: 3 }, { name: 'Andermatt', sitze: 2 },
+    { name: 'Spiringen', sitze: 2 }, { name: 'Göschenen', sitze: 1 }, { name: 'Gurtnellen', sitze: 1 },
+    { name: 'Hospental', sitze: 1 }, { name: 'Isenthal', sitze: 1 }, { name: 'Realp', sitze: 1 },
+    { name: 'Seelisberg', sitze: 1 }, { name: 'Sisikon', sitze: 1 }, { name: 'Unterschächen', sitze: 1 },
+    { name: 'Wassen', sitze: 1 },
+  ]}
+  hervorheben={['Altdorf', 'Schattdorf', 'Bürglen', 'Erstfeld']}
+  legende="Proporz: Gemeinden mit 5 oder mehr Sitzen"
+  titel="Sitze im Landrat pro Gemeinde, Legislatur 2024–2028. Ein Punkt ist ein Sitz."
+/>
+
+So werden **37 Sitze** in den vier grössten Gemeinden nach Proporz vergeben und **27 Sitze** in den übrigen 15 nach Majorz. Die nächste Landratswahl ist im Januar 2028.
+
+## Volksrechte
+
+Weil Uri klein ist, braucht es wenige Unterschriften. Sie müssen amtlich beglaubigt sein.
+
+- **Volksinitiative:** **600 Unterschriften** (Art. 28 KV). Eine feste Sammelfrist gibt es nicht, die Beglaubigung darf aber höchstens 2 Monate alt sein (Art. 66 WAVG). Über eine Initiative wird spätestens **anderthalb Jahre** nach der Einreichung abgestimmt. Mit einer Initiative kann man auch die **Abberufung einer Behörde** oder eine Standesinitiative an den Bund verlangen (Art. 27 KV).
+- **Fakultatives Referendum:** **450 Unterschriften** innert 90 Tagen, zum Beispiel gegen Verordnungen, Konkordate oder neue einmalige Ausgaben über CHF 500 000 (Art. 25 KV).
+- **Obligatorisches Referendum:** Über Verfassungsänderungen, **alle Gesetze** und neue einmalige Ausgaben über CHF 1 Million stimmt das Volk immer ab (Art. 24 KV). Anders als in vielen Kantonen gibt es bei Gesetzen also keine Wahl: Jedes neue Gesetz kommt an die Urne.
+- **In der Gemeinde:** Eine Gemeindeinitiative braucht die Unterschriften eines **Zehntels** der Stimmberechtigten (Art. 29 KV).
+
+Alle kantonalen Wahlen und Abstimmungen finden an der **Urne** statt (Art. 30 KV). Eine Landsgemeinde hat Uri heute nicht mehr.
+
+## Gemeinden und Korporationen
+
+Die Verfassung kennt mehrere Arten von Gemeinden (Art. 64 KV): die **Einwohnergemeinde**, zu der alle gehören, die dort wohnen, daneben **Kirchgemeinden**, **Ortsbürgergemeinden** und **Korporationsbürgergemeinden**. In den {gemeindenVon('UR').length} Einwohnergemeinden entscheiden die Stimmberechtigten an der **Gemeindeversammlung** oder an der Urne, die Regierung der Gemeinde ist der **Gemeinderat** (Art. 10–15 GEG). Ein Gemeindeparlament sieht das Gemeindegesetz nicht vor.
+
+Eine Urner Besonderheit sind die beiden **Korporationen**: die **Korporation Uri** und die **Korporation Ursern** im Urserental. Sie sind eigenständige Körperschaften des öffentlichen Rechts, ihr Vermögen ist von der Verfassung gewährleistet (Art. 72 und 73 KV). Mitglieder sind die Korporationsbürgerinnen und -bürger, nicht alle Einwohner.
+
+## Im Bund
+
+Der Kanton Uri wählt **1 Mitglied** in den Nationalrat, so wenig wie sonst nur Obwalden, Nidwalden, Glarus und die beiden Appenzell. Bei nur einem Sitz gibt es keinen Proporz: Gewählt ist, wer am meisten Stimmen hat (Art. 47 BPR). In den **Ständerat** wählt Uri wie fast alle Kantone **2** Mitglieder, vom Volk an der Urne (Art. 21 KV).

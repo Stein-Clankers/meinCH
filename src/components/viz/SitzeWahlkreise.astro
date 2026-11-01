@@ -1,0 +1,27 @@
+---
+/**
+ * Unit chart for a cantonal parliament: one dot per seat, one row per electoral district, sorted by seats.
+ * Reuses the `sitze` styles of SitzeKantone with a wider name column. Districts in `hervorheben` use the accent.
+ */
+interface Props { wahlkreise: { name: string; sitze: number }[]; hervorheben?: string[]; legende?: string; titel: string }
+const { wahlkreise, hervorheben = [], legende, titel } = Astro.props;
+const zeilen = [...wahlkreise].sort((a, b) => b.sitze - a.sitze || a.name.localeCompare(b.name, 'de'));
+---
+<figure class="sitze sitze--wahlkreise">
+  <ol class="sitze__liste">
+    {zeilen.map((w) => (
+      <li class="sitze__zeile" data-hervor={hervorheben.includes(w.name) ? '' : undefined} title={`${w.name}: ${w.sitze} ${w.sitze === 1 ? 'Sitz' : 'Sitze'}`}>
+        <span class="sitze__kanton">{w.name}</span>
+        <span class="sitze__punkte" aria-hidden="true">{Array.from({ length: w.sitze }, () => <i></i>)}</span>
+        <span class="sitze__zahl">{w.sitze}</span>
+      </li>
+    ))}
+  </ol>
+  {legende && <ul class="legende"><li><span class="legende__feld" data-halb></span>{legende}</li></ul>}
+  <figcaption>{titel}</figcaption>
+</figure>
+
+<style>
+  .sitze--wahlkreise :global(.sitze__zeile) { grid-template-columns: 13ch minmax(0, 1fr) 3ch; }
+  .sitze--wahlkreise .sitze__kanton { overflow-wrap: anywhere; }
+</style>
