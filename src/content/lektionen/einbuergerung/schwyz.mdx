@@ -1,0 +1,121 @@
+---
+titel: Einbürgerung im Kanton Schwyz
+beschreibung: Was der Kanton Schwyz zusätzlich zum Bund verlangt, wie die Gemeinden die Grundkenntnisse prüfen, wer entscheidet, Gebühren und Ablauf.
+thema: einbuergerung
+kanton: SZ
+reihenfolge: 50
+geprueft_am: 2026-10-24
+quellen:
+  - titel: Bundesgesetz über das Schweizer Bürgerrecht (BüG, SR 141.0)
+    url: https://www.fedlex.admin.ch/eli/cc/2016/404/de
+    artikel: Art. 9, 18
+  - titel: Verordnung über das Schweizer Bürgerrecht (BüV, SR 141.01)
+    url: https://www.fedlex.admin.ch/eli/cc/2016/405/de
+    artikel: Art. 6, 25
+  - titel: Bürgerrechtsgesetz des Kantons Schwyz (KBüG, SRSZ 110.100)
+    url: https://www.sz.ch/public/upload/assets/3640/110_100.pdf
+    artikel: § 3, 4, 7–14, 18
+  - titel: Bürgerrechtsverordnung des Kantons Schwyz (KBüV, SRSZ 110.111)
+    url: https://www.sz.ch/public/upload/assets/3641/110_111.pdf
+    artikel: § 5–9, 13, 14, 16, 20
+  - titel: Regierungsrat Schwyz, RRB Nr. 612/2017, Antwort auf die Interpellation «Wie wird im Kanton Schwyz eingebürgert?»
+    url: https://www.sz.ch/public/upload/assets/30288/I_Einbuergerung_SZ.pdf
+    artikel: Ziff. 2.1, 2.2.1–2.2.5
+  - titel: Regierungsrat Schwyz, RRB Nr. 242/2023, Antwort auf die Interpellation zur Einbürgerungsrechtsprechung
+    url: https://www.sz.ch/public/upload/assets/66345/I_Einb%C3%BCrgerungsrechtsprechung.pdf
+  - titel: Bundesgericht, Urteil 1D_1/2019 vom 18. Dezember 2019 (BGE 146 I 49, Gemeinde Arth)
+    url: https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F146-I-49%3Ade&lang=de&type=show_document
+    artikel: E. 4.3
+  - titel: Gemeinde Schwyz, Richtlinien und Verfahren bei Einbürgerungen (18. März 2022)
+    url: https://www.gemeindeschwyz.ch/_doc/5315491
+  - titel: Gemeinde Schwyz, Gebührentarif für das ordentliche Einbürgerungsverfahren (25. September 2020)
+    url: https://www.gemeindeschwyz.ch/_doc/2910599
+  - titel: Gemeinde Tuggen, Merkblatt ordentliche Einbürgerung
+    url: https://www.tuggen.ch/public/upload/assets/66/Merkblatt%20Ordentliche%20Einb%C3%BCrgerung.pdf
+  - titel: Gemeinde Lauerz, Merkblatt ordentliche Einbürgerung
+    url: https://www.lauerz.ch/storage/e231f7f2f6531c211438b6a9e776f55669882ee286977e9074d5cc02c85bbbab
+  - titel: SEM, Einbürgerungen nach Kanton 2025
+    url: https://www.sem.admin.ch/dam/sem/de/data/publiservice/statistik/auslaenderstatistik/einbuergerungen/einbuergerungen-kanton.xlsx.download.xlsx/einbuergerungen-kanton-d.xlsx
+  - titel: SEM, Ordentliche Einbürgerung
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import Ablauf from '../../../components/viz/Ablauf.astro';
+import { pfad } from '../../../lib/site';
+
+<Zahlen zahlen={[
+  { wert: '5 J.', label: 'Wohnsitz in der Gemeinde' },
+  { wert: 'B2', label: 'Deutsch mündlich', hinweis: 'B1 schriftlich' },
+  { wert: '5 J.', label: 'ohne Sozialhilfe' },
+  { wert: '280', label: 'Einbürgerungen 2025', hinweis: 'ordentliche, Kanton Schwyz' },
+]} />
+
+Wer sich einbürgern lässt, wird gleichzeitig Bürgerin oder Bürger einer **Gemeinde**, eines **Kantons** und der **Schweiz**. Für die Voraussetzungen des Bundes (Niederlassungsbewilligung C, 10 Jahre Aufenthalt, Integration) siehe <a href={pfad('einbuergerung/zuerich')}>Einbürgerung im Kanton Zürich</a>. Sie gelten in allen Kantonen gleich. Hier steht, was im Kanton Schwyz dazukommt. Der Kanton Schwyz verlangt in mehreren Punkten mehr als der Bund.
+
+## Wohnsitz
+
+Die Kantone legen eine Mindestwohndauer von 2 bis 5 Jahren fest (Art. 18 BüG). Schwyz wählt das Maximum: Beim Gesuch musst du seit mindestens **5 Jahren ununterbrochen in der Gemeinde** wohnen, in der du dich einbürgern lässt (§ 3 KBüG). Ziehst du nach dem Gesuch innerhalb der Schweiz um, bleibt die Gemeinde zuständig; nur ein Wegzug ins Ausland beendet das Verfahren.
+
+## Sprache
+
+Verlangt sind **Deutsch B2 mündlich und B1 schriftlich** (§ 5 KBüV). Der Bund verlangt nur B1 mündlich und A2 schriftlich (Art. 6 BüV). Den Nachweis bringst du auf eigene Kosten, meist mit einem Sprachdiplom, das genau dieses Niveau bestätigt. Keinen Nachweis brauchst du, wenn
+
+- Deutsch deine Muttersprache ist,
+- du mindestens **7 Jahre** in der Schweiz die Volksschule oder die Sekundarstufe II auf Deutsch besucht hast oder
+- du eine Mittelschule, Hochschule oder Universität im deutschsprachigen Raum auf Deutsch abgeschlossen hast.
+
+Fehlt der Sprachnachweis, tritt die Gemeinde auf das Gesuch gar nicht ein (§ 7 KBüG).
+
+## Was Schwyz sonst verlangt
+
+- **Charta:** Wer volljährig ist, unterschreibt eine Erklärung, dass er die demokratische und rechtsstaatliche Ordnung und die Grundwerte der Bundesverfassung anerkennt und die Gesetze einhält (§ 9 KBüV).
+- **Strafregister:** Beim Gesuch darf der Auszug für Privatpersonen keinen Eintrag haben und kein Strafverfahren hängig sein, sonst tritt die Gemeinde nicht ein (§ 7 KBüG). In den 5 Jahren vor dem Gesuch darf es keine Verurteilung wegen eines Verbrechens, eines Vergehens oder einer Busse über CHF 1000 gegeben haben (§ 8 KBüV). Seit einem Urteil des Schwyzer Verwaltungsgerichts von 2021 müssen Gemeinde und Kanton aber den ganzen Fall würdigen; ein einzelner leichter Fehltritt schliesst die Einbürgerung nicht mehr automatisch aus (RRB 242/2023).
+- **Finanzen:** Keine Betreibungen oder Verlustscheine in den letzten 5 Jahren, alle fälligen Steuern bezahlt, **keine Sozialhilfe in den letzten 5 Jahren** und ältere Sozialhilfe aus den 5 Jahren davor ganz zurückbezahlt (§ 7 KBüV). Der Bund verlangt 3 Jahre ohne Sozialhilfe.
+
+## Wie die Grundkenntnisse geprüft werden
+
+Du musst Grundkenntnisse über die Schweiz, den **Kanton Schwyz** und deine **Gemeinde** haben, vor allem zu Geschichte und Geografie, Demokratie und Föderalismus, politischen Rechten, sozialer Sicherheit sowie Schule und Ausbildung (§ 6 KBüV).
+
+Einen kantonalen Einbürgerungstest gibt es nicht. Die **Einbürgerungsbehörde der Gemeinde** entscheidet, wie sie prüft: im persönlichen Gespräch, mit einer schriftlichen Prüfung bei einer vom Kanton anerkannten Bildungseinrichtung, die du selbst bezahlst, oder mit beidem (§ 6 Abs. 2 KBüV).
+
+- 2017 waren es 4 Gemeinden mit Prüfung, 10 nur mit Gespräch und 14 mit beidem. Anerkannt war damals nur das **Berufsbildungszentrum Pfäffikon** (Kurse in Pfäffikon und Goldau): Kurs mit Prüfung CHF 420, nur die Prüfung CHF 150. Empfohlen wurde das Lehrmittel «Echo – Informationen zur Schweiz» und ein Dossier zum Kanton Schwyz (RRB 612/2017).
+- **Beispiel Gemeinde Schwyz:** Die Prüfung bei der anerkannten Bildungseinrichtung ist Pflicht. Das Einbürgerungsgespräch dauert in der Regel etwa 45 Minuten, findet auf Deutsch statt und fragt besonders nach dem Kanton und der Gemeinde Schwyz. Ehepaare werden getrennt befragt, Kinder ab 12 Jahren selbst.
+- Eine Fragenzahl, eine Bestehensgrenze oder einen Fragenkatalog veröffentlicht weder der Kanton noch die Gemeinde Schwyz. Frag bei deiner Gemeinde nach, welche Prüfung sie verlangt.
+
+Wie weit eine Gemeinde gehen darf, hat das **Bundesgericht 2019** in einem Fall aus **Arth** entschieden: Die Prüfung ist kein Fachexamen mit Spezialwissen. Es geht um Grundkenntnisse und Allgemeinwissen, und die Integration muss als Ganzes beurteilt werden. Einzelne Wissenslücken reichen für eine Ablehnung nicht (BGE 146 I 49).
+
+## Wer entscheidet
+
+In der Regel entscheidet die **Einbürgerungsbehörde** der Gemeinde. Sie hat mindestens 5 Mitglieder und wird von einem Mitglied des Gemeinderats geleitet (§ 10 KBüG). So ist es zum Beispiel in der Gemeinde Schwyz.
+
+Eine Gemeinde kann den Entscheid aber der **Gemeindeversammlung** übertragen (§ 11 KBüG). Dann stellt die Behörde dort Antrag, und die Versammlung stimmt offen ab. Der Antrag gilt als angenommen, wenn niemand einen begründeten Gegenantrag stellt. **Tuggen** etwa erteilt das Bürgerrecht seit einer Volksabstimmung von 2013 an der Gemeindeversammlung. Bis 2003 haben viele Schwyzer Gemeinden an der **Urne** über Einbürgerungen abgestimmt. Seit zwei Urteilen des Bundesgerichts von 2003 sind Einbürgerungen an der Urne grundsätzlich unzulässig (RRB 612/2017).
+
+Eine Ablehnung der Einbürgerungsbehörde kannst du innert 20 Tagen, einen Entscheid der Gemeindeversammlung innert 10 Tagen beim **Verwaltungsgericht** anfechten (§ 13 KBüG).
+
+Am Schluss erteilt nicht die Regierung, sondern das **Kantonsparlament** das Kantonsbürgerrecht: Der Kantonsrat entscheidet über jedes Gesuch (§ 12 KBüG), laut den Merkblättern der Gemeinden in der Regel zweimal im Jahr in einem Sammelbeschluss.
+
+## Ablauf
+
+<Ablauf titel="Ordentliche Einbürgerung im Kanton Schwyz" schritte={[
+  { titel: 'Gesuch', text: 'Bei der Wohngemeinde, mit Sprachnachweis und Strafregisterauszug.' },
+  { zahl: '20 Tage', titel: 'Publikation', text: 'Im Amtsblatt und in der Gemeinde. Alle können Einwände anbringen.' },
+  { titel: 'Gemeinde', text: 'Prüfung der Grundkenntnisse, Gespräch, Entscheid über das Gemeindebürgerrecht.' },
+  { titel: 'Kanton und Bund', text: 'Das Departement des Innern prüft die Akten, das SEM erteilt die Einbürgerungsbewilligung.' },
+  { titel: 'Kantonsrat', text: 'Erteilt das Kantonsbürgerrecht. Mit der Bezahlung aller Gebühren bist du eingebürgert.' },
+]} />
+
+Die Gemeinde publiziert das Gesuch innert 3 Monaten, nachdem es vollständig ist (§ 13 KBüV). Wer Einwände anbringt, ist am Verfahren nicht beteiligt. Die Einwände werden dir ohne Namen eröffnet, und du kannst im Gespräch oder schriftlich dazu Stellung nehmen (§ 8 KBüG, § 14 KBüV). Vom Gesuch bis zum Bürgerrecht vergehen nach Angaben der Gemeinden Lauerz und Tuggen **2 bis 3 Jahre**.
+
+## Gebühren
+
+| Wer | Einzelperson | Ehepaar oder Familie |
+|---|---|---|
+| Kanton Schwyz | CHF 100–500 | CHF 100–1000 |
+| Gemeinde, Beispiel Schwyz | CHF 2850 | CHF 2850 |
+| Bund | CHF 100 | CHF 150 (Ehepaar) |
+
+Der Kanton rechnet nach Aufwand ab und darf den Höchstbetrag bei besonders aufwendigen Gesuchen um bis zu 100 % überschreiten (§ 20 KBüV). Die Gemeinden legen ihre Gebühren selbst fest, der Regierungsrat genehmigt sie (§ 18 KBüG). In der Gemeinde Schwyz zahlen Schülerinnen, Lernende und Studierende CHF 1350, eine Abweisung kostet CHF 500. 2017 lagen die Gemeindegebühren für eine Einzelperson meist zwischen CHF 2000 und 3600, zum Beispiel Freienbach CHF 2300, Einsiedeln CHF 3600 (RRB 612/2017). Dazu kommen die Kosten für Sprachdiplom und Prüfung.
+
+## Zahlen
+
+2025 wurden im Kanton Schwyz **433 Personen** eingebürgert: **280** im ordentlichen Verfahren, 152 im erleichterten Verfahren und 1 Person wieder eingebürgert (SEM).

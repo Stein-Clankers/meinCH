@@ -1,0 +1,101 @@
+---
+titel: Politik im Kanton Schwyz
+beschreibung: Kantonsrat, Regierungsrat und Gerichte des Kantons Schwyz, die tiefen Unterschriftenzahlen für Initiative und Referendum, die sechs Bezirke und wie die Gemeinden organisiert sind.
+thema: politik
+kanton: SZ
+reihenfolge: 54
+geprueft_am: 2026-10-24
+quellen:
+  - titel: Verfassung des Kantons Schwyz vom 24. November 2010 (KV, SRSZ 100.100)
+    url: https://www.sz.ch/public/upload/assets/7256/100_100.pdf
+    artikel: § 26–28, 34, 35, 43, 44, 47, 48, 54, 56, 65, 66, 69–72
+  - titel: Verfassung des Kantons Schwyz (SR 131.215, Fassung mit Inkrafttreten)
+    url: https://www.fedlex.admin.ch/eli/cc/2012/1262_fga/de
+  - titel: Kantonsratswahlgesetz (KRWG, SRSZ 120.200)
+    url: https://www.sz.ch/public/upload/assets/7257/120_200.pdf
+    artikel: § 1, 2, 16–18
+  - titel: Regierungsratsbeschluss über die Verteilung der Kantonsratssitze auf die Gemeinden (SRSZ 142.211)
+    url: https://www.sz.ch/public/upload/assets/32449/142_211.pdf
+    artikel: § 1
+  - titel: Gemeindeorganisationsgesetz (GOG, SRSZ 152.100)
+    url: https://www.sz.ch/public/upload/assets/7311/152_100.pdf
+    artikel: § 3, 8, 9, 15, 36, 37
+  - titel: Justizgesetz (JG, SRSZ 231.110)
+    url: https://www.sz.ch/public/upload/assets/93043/231_110.pdf
+    artikel: § 10, 14, 18, 29
+  - titel: Bundesverfassung (BV, SR 101)
+    url: https://www.fedlex.admin.ch/eli/cc/1999/404/de
+    artikel: Art. 149, 150
+  - titel: BFS, Amtliches Gemeindeverzeichnis der Schweiz
+    url: https://www.agvchapp.bfs.admin.ch/de/state/query
+---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import Bezirke from '../../../components/viz/Bezirke.astro';
+import { gemeindenVon } from '../../../lib/kantone';
+
+<Zahlen zahlen={[
+  { wert: '100', label: 'Kantonsrat', hinweis: 'Parlament' },
+  { wert: '7', label: 'Regierungsrat', hinweis: 'Regierung' },
+  { wert: '6', label: 'Bezirke' },
+  { wert: String(gemeindenVon('SZ').length), label: 'Gemeinden', hinweis: 'Stand 1. Januar 2026' },
+]} />
+
+Die Amtssprache ist **Deutsch** (§ 44 KV). Die heutige **Kantonsverfassung** stammt vom 24. November 2010. Das Volk hat sie am 15. Mai 2011 angenommen, in Kraft ist sie seit dem **1. Januar 2013**. Sie ersetzt die Verfassung von 1898.
+
+## Die Behörden des Kantons
+
+| Gewalt | Behörde | Wahl |
+|---|---|---|
+| Gesetzgebung | **Kantonsrat**, 100 Mitglieder | vom Volk, alle 4 Jahre, nach Proporz; jede der {gemeindenVon('SZ').length} Gemeinden ist ein Wahlkreis |
+| Regierung | **Regierungsrat**, 7 Mitglieder | vom Volk, alle 4 Jahre, nach Majorz |
+| Rechtsprechung | **Kantonsgericht**, **Verwaltungsgericht**, Straf- und Jugendgericht, Bezirksgerichte | Bezirksgerichte und Kantonsrichter vom Volk der Bezirke, die Präsidien der kantonalen Gerichte vom Kantonsrat |
+
+Kantonsrat und Regierungsrat werden am selben Tag gewählt (§ 43 KV). Den Vorsitz im Regierungsrat hat der **Landammann**. Ihn und seinen Stellvertreter, den Statthalter, wählt der Kantonsrat aus den sieben Regierungsräten für **2 Jahre** (§ 54 KV).
+
+Das **Kantonsgericht** ist die oberste Instanz in Zivil- und Strafsachen, das **Verwaltungsgericht** in Verwaltungssachen (§ 65 und 66 KV). In erster Instanz urteilen die Bezirksgerichte: Jeder Bezirk hat eines, mehrere Bezirke können eines gemeinsam führen (§ 29 JG).
+
+## Wie der Kantonsrat gewählt wird
+
+Die 100 Sitze werden nach der Bevölkerung auf die Gemeinden verteilt. **Jede Gemeinde hat mindestens einen Sitz**, auch Riemenstalden mit 84 Einwohnerinnen und Einwohnern Ende 2022 (§ 48 KV, Sitzverteilung 2023). Seit einer Verfassungsänderung von 2015 werden die Stimmen im ganzen Kanton zusammengezählt: Zuerst erhält jede Partei nach ihrem kantonalen Anteil ihre Sitze, dann werden diese auf die Gemeinden verteilt (§ 17 und 18 KRWG). So zählen auch Stimmen in kleinen Gemeinden mit nur einem Sitz. Eine Partei muss im ganzen Kanton mindestens **1 %** der Wählerinnen und Wähler erreichen (§ 16 KRWG).
+
+| Bezirk | Sitze im Kantonsrat |
+|---|---|
+| Schwyz (15 Gemeinden) | 37 |
+| March (9 Gemeinden) | 28 |
+| Höfe (3 Gemeinden) | 17 |
+| Einsiedeln | 9 |
+| Küssnacht | 8 |
+| Gersau | 1 |
+
+Die meisten Sitze hat die Gemeinde **Freienbach** mit 10, vor Einsiedeln und Schwyz mit je 9. Die Verteilung gilt seit den Wahlen 2024 und beruht auf der Bevölkerung Ende 2022.
+
+## Volksrechte
+
+Die Hürden sind im Kanton Schwyz sehr tief:
+
+- **Volksinitiative:** **2000 Unterschriften**, für eine Änderung der Verfassung, ein Gesetz oder eine Vereinbarung mit anderen Kantonen oder Staaten (§ 28 KV). Lehnt der Kantonsrat sie ab, stimmt das Volk darüber ab.
+- **Fakultatives Referendum:** **1000 Unterschriften in 60 Tagen**, gegen Gesetze, Vereinbarungen und neue Ausgaben über CHF 5 Millionen einmalig oder CHF 500 000 jährlich (§ 35 KV).
+- **Obligatorisches Referendum:** Verfassungsänderungen, vom Kantonsrat abgelehnte Initiativen und Vorlagen mit Gegenvorschlag kommen immer vor das Volk (§ 34 Abs. 1 KV).
+- **Eine Schwyzer Besonderheit:** Stimmen im Kantonsrat **weniger als drei Viertel** einem Gesetz oder einer solchen Ausgabe zu, kommt die Vorlage automatisch zur Volksabstimmung, ohne Unterschriften (§ 34 Abs. 2 KV).
+
+Stimmen und wählen dürfen im Kanton, in den Bezirken und in den Gemeinden nur Schweizerinnen und Schweizer ab 18 (§ 26 KV).
+
+## Die Bezirke
+
+Der Kanton gliedert sich in **Bezirke und Gemeinden**. Anders als in den meisten Kantonen sind die Bezirke hier nicht nur Verwaltungskreise, sondern **eigene Körperschaften** mit Stimmberechtigten, einer Regierung, eigenen Steuern und einem Bezirksgericht (§ 69, 70 und 77 KV). Die Regierung eines Bezirks ist der **Bezirksrat** unter dem **Bezirksammann** (§ 36 GOG). Die Stimmberechtigten des Bezirks wählen auch die Richterinnen und Richter des Bezirksgerichts und die Kantonsrichter, die dem Bezirk zustehen (§ 15 GOG).
+
+<Bezirke kanton="SZ" hervorheben={['Einsiedeln', 'Gersau', 'Küssnacht (SZ)']} legende="Bezirk und Gemeinde zugleich" titel="Die 6 Bezirke des Kantons Schwyz, Stand 1. Januar 2026" />
+
+Drei Bezirke bestehen aus nur einer Gemeinde: **Einsiedeln, Gersau und Küssnacht**. Dort erfüllen die Organe des Bezirks auch die Aufgaben der Gemeinde (§ 3 GOG). Der Bezirk Schwyz umfasst 15 Gemeinden, die March 9 und die Höfe 3.
+
+## Im Bund
+
+Der Kanton Schwyz wählt **4 Mitglieder** in den Nationalrat und **2** in den Ständerat. Die Ständeräte werden wie die Mitglieder des Kantonsrats für 4 Jahre gewählt (§ 43 KV).
+
+## Gemeinden und der Hauptort
+
+Die Stimmberechtigten sind das oberste Organ jeder Gemeinde. Sie entscheiden an der **Urne** oder an der **Gemeindeversammlung**. Über Budget, Steuerfuss und Jahresrechnung entscheidet immer die Gemeindeversammlung (§ 8 und 16 GOG). Eine Gemeinde kann auch ein Parlament einführen (§ 72 KV).
+
+Die Regierung einer Gemeinde ist der **Gemeinderat** mit **5 bis 9 Mitgliedern**: dem Gemeindepräsidium, dem **Säckelmeister**, der für die Finanzen zuständig ist, und 3 bis 7 weiteren Mitgliedern. Gewählt wird nach Majorz. Alle 2 Jahre wird die Hälfte des Rats neu gewählt; Präsidium und Säckelmeister haben eine Amtsdauer von 2 Jahren, die übrigen Mitglieder von 4 Jahren (§ 36 und 37 GOG).
+
+**Hauptort** ist die Gemeinde Schwyz. Die bevölkerungsreichste Gemeinde ist aber **Freienbach** am Zürichsee, knapp vor Einsiedeln und Schwyz.
